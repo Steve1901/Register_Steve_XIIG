@@ -27,6 +27,7 @@
         text-shadow: black;
         font-size: 2em;
         text-align: center;
+        animation: shimmer 2s infinite;
     }
 
     .form-container {
@@ -38,6 +39,8 @@
         width: 100%;
         max-width: 400px;
         text-align: center;
+        animation: shimmer 2s infinite;
+        animation: bounce 1s infinite;
     }
 
     form input {
@@ -48,12 +51,7 @@
         border-radius: 6px;
         font-size: 1em;
         box-sizing: border-box;
-    }
 
-    form input:focus {
-        outline: none;
-        border-color: #007bff;
-        box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
     }
 
     .squishy {
@@ -156,7 +154,7 @@
         padding: 12px 15px;
         text-align: left;
         border-bottom: 1px solid #eee;
-        background-color: rgb(5 150 105);
+        background-color: white;
     }
 
     #datatable th {
