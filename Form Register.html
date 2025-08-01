@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title style="text-align: center;">Stevanus Herdi Pamungkas XII.G</title>
+    
+    <style type="text/css" media="all">
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center; 
+        align-items: center;     
+        min-height: 100vh;       
+        flex-direction: column;
+        background-image: url(https://www.pixelstalk.net/wp-content/uploads/image12/Laptop-Wallpaper-HD-4K-with-Aerial-view-of-lush-green-rice-terraces-winding-through-a-hillside-capturing-the-patterns-and-textures-of-nature.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+
+    h1 {
+        margin-top: 40px;
+        color: white;
+        text-shadow: black;
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .form-container {
+        background-color: #fff;
+        padding: 30px 40px;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+    }
+
+    form input {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 1em;
+        box-sizing: border-box;
+    }
+
+    form input:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+    }
+
+    .squishy {
+  position: relative;
+  font-size: 1.875rem;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 250ms;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.squishy-tech {
+  background-color: rgb(5 150 105);
+  color: white;
+  border-radius: 0.5rem;
+  box-shadow:
+    inset 0 1px 0 0 rgba(255,255,255,0.3),
+    0 2px 0 0 #059669,
+    0 4px 0 0 #047857,
+    0 6px 0 0 #065f46,
+    0 8px 0 0 #064e3b,
+    0 8px 16px 0 rgba(5,150,105,0.5);
+  overflow: hidden;
+}
+
+.squishy-tech::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent);
+  transform: translateX(-100%);
+  animation: shimmer 2s infinite;
+}
+
+.squishy-tech:hover {
+  transform: translateY(4px);
+  box-shadow:
+    inset 0 1px 0 0 rgba(255,255,255,0.3),
+    0 1px 0 0 #059669,
+    0 2px 0 0 #047857,
+    0 3px 0 0 #065f46,
+    0 4px 0 0 #064e3b,
+    0 4px 8px 0 rgba(5,150,105,0.5);
+}
+
+.squishy-tech:hover i {
+  animation: bounce 1s infinite;
+}
+
+/* Animations */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25%);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+    #datatable {
+        width: 90%;
+        max-width: 800px;
+        margin: 40px auto;
+        border-collapse: collapse;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        background-color: white;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    #datatable th, #datatable td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #eee;
+        background-color: rgb(5 150 105);
+    }
+
+    #datatable th {
+        background-color: rgb(5 150 105);
+        color: white;
+    }
+
+    #datatable tr:hover {
+        background-color: #f1f1f1;
+    }
+</style>
+    
+</head>
+
+    <body>
+    <h1>Register</h1>
+    <div class="form-container">
+    <form id="registerform" class="" action="" method="get">
+        <input required="" type="text" name="name" id="Name" placeholder="Name"> <br>
+    <input required="" type="email" name="email" id="Email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+       title="Masukkan email yang valid, misalnya: user@example.com"> <br>
+    <input required="" type="password" name="password" id="Password" placeholder="Password"> <br>
+    <input required="" type="number" name="noHp" id="noHp" placeholder="No. HP"> <br>
+    <input required="" type="date" name="birthDate" id="TanggalLahir" placeholder="Tanggal Lahir"> <br>
+        
+        <button type="submit" class="squishy squishy-tech">Submit</button>
+    </form>
+    </div>
+    
+    <table id="datatable" style="border: 1px solid #ccc">
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>No. HP</th>
+                <th>Tanggal Lahir</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+    
+    <script>
+    document.getElementById("registerform").addEventListener("submit", function(e){
+        e.preventDefault();
+        
+        const name = document.getElementById("Name").value;
+        const email = document.getElementById("Email").value;
+        const password = document.getElementById("Password").value;
+        const noHp = document.getElementById("noHp").value;
+        const tanggalLahir = document.getElementById("TanggalLahir").value;
+        
+        const table = document.getElementById("datatable").getElementsByTagName("tbody")[0];
+        const newRow = table.insertRow();
+        
+        newRow.insertCell(0).textContent = name;
+        newRow.insertCell(1).textContent = email;
+        newRow.insertCell(2).textContent = password;
+        newRow.insertCell(3).textContent = noHp;
+        newRow.insertCell(4).textContent = tanggalLahir;
+        
+        document.getElementById("registerform").reset();
+    });
+    </script>
+
+</body>
+</html>
