@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title style="text-align: center;">Stevanus Herdi Pamungkas XII.G</title>
+    <link rel="stylesheet" href="style-register.css">
+</head>
+
+    <body>
+    <h1>Register</h1>
+    <div class="form-container">
+    <form id="registerform" class="" action="" method="get">
+        <input required="" type="text" name="name" id="Name" placeholder="Name"> <br>
+    <input required="" type="email" name="email" id="Email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+       title="Masukkan email yang valid, misalnya: user@example.com"> <br>
+    <input required="" type="password" name="password" id="Password" placeholder="Password"> <br>
+    <input required="" type="number" name="noHp" id="noHp" placeholder="No. HP"> <br>
+    <input required="" type="date" name="birthDate" id="TanggalLahir" placeholder="Tanggal Lahir"> <br>
+        
+        <button type="submit" class="squishy squishy-tech">Submit</button>
+        <p><a href="login.html">login di sini</a></p>
+    </form>
+    </div>
+    
+    <table id="datatable" style="border: 1px solid #ccc">
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>No. HP</th>
+                <th>Tanggal Lahir</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+     <script src="script.js"></script>
+
+</body>
+</html>
